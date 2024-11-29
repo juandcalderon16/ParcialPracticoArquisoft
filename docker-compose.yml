@@ -1,0 +1,10 @@
+services:
+  checkin:
+    build: .
+    image: parcialpracticoarquisoft-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:h2:mem:ParcialPracticoArquisoft
+    volumes:
+      - ./target:/app/target
